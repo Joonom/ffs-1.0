@@ -33,6 +33,8 @@ public class BranchService {
 
     public BranchInfo getBranch(Long branchId) {
         Optional<Branch> branchOptional = branchRepository.findById(branchId);
+
+
         if(branchOptional.isEmpty()) return null;
 
         BranchInfo branchInfo = mapBranchToBranchInfo(branchOptional.get());
